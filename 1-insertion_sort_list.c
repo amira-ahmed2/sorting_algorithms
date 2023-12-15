@@ -2,8 +2,8 @@
 #include "sort.h"
 
 /**
- * swap_two_num - Swap  the doubly-linked list
- * @h: the head of the doubly-linked list
+ * swap_node - Swap  the doubly-linked list
+ * @head: the head of the doubly-linked list
  * @n1: The first node to swap
  * @n2: The second  node to swap
  */
