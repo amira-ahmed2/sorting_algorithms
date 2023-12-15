@@ -23,10 +23,10 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t i, len = size;
 	bool flags = false;
-	
+
 	if (array == NULL || size < 2)
 		return;
-	
+
 	while (flags == false)
 	{
 		flags = true;
@@ -39,6 +39,6 @@ void bubble_sort(int *array, size_t size)
 				flags = false;
 			}
 		}
-		len--;   
+		len--;
 	}
 }
