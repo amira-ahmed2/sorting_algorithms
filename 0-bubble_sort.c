@@ -8,9 +8,9 @@
  */
 void swap_two_num(int *n1, int *n2)
 {
-    int temp = *n1;
-    *n1 = *n2;
-    *n2 = temp;
+	int temp = *n1;
+	*n1 = *n2;
+	*n2 = temp;
 }
 
 /**
@@ -21,24 +21,24 @@ void swap_two_num(int *n1, int *n2)
  */
 void bubble_sort(int *array, size_t size)
 {
-    size_t i, len = size;
-    bool flags = false;
-    
-    if (array == NULL || size < 2)
+	size_t i, len = size;
+	bool flags = false;
+	
+	if (array == NULL || size < 2)
 		return;
 	
 	while (flags == false)
 	{
-	    flags = true;
-	    for (i = 0; i < len - 1; i++)
-        {
-            if (array[i] > array[i + 1])
-            {
-                swap_two_num(array + i, array + i + 1);
+		flags = true;
+		for (i = 0; i < len - 1; i++)
+		{
+			if (array[i] > array[i + 1])
+			{
+				swap_two_num(array + i, array + i + 1);
 				print_array(array, size);
 				flags = false;
-            }
-        }
-        len--;   
+			}
+		}
+		len--;   
 	}
 }
