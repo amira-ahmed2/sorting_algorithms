@@ -1,12 +1,12 @@
-#include <stdio.h>
 #include "sort.h"
 
+
 /**
- * swap_two_num - Swap two integers in an array.
+ * swap_selection_sort - Swap two integers in an array.
  * @n1: The first integer to swap.
  * @n2: The second integer to swap.
  */
-void swap_two(int *n1, int *n2)
+void swap_selection_sort(int *n1, int *n2)
 {
 	int temp = *n1;
 	*n1 = *n2;
@@ -35,7 +35,7 @@ void selection_sort(int *array, size_t size)
 
 		if ((array + i) != min_postion)
 		{
-			swap_ints(array + i, min_postion);
+			swap_selection_sort(array + i, min_postion);
 			print_array(array, size);
 		}
 	}
