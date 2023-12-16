@@ -2,16 +2,16 @@
 
 /**
  * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * @n1: The first integer to swap.
+ * @n2: The second integer to swap.
  */
-void swap_ints(int *a, int *b)
+void swap_ints(int *n1, int *n2)
 {
-	int tmp;
+	int temp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	temp = *n1;
+	*n1 = *n2;
+	*n2 = temp;
 }
 
 /**
