@@ -23,7 +23,7 @@ void swap_ints(int *n1, int *n2)
 void selection_sort(int *array, size_t size)
 {
 
-	int *min;
+	int *minpos;
 	size_t i, j;
 
 	if (array == NULL || size < 2)
@@ -31,13 +31,13 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size - 1; i++)
 	{
-		min = array + i;
+		minpos = array + i;
 		for (j = i + 1; j < size; j++)
-			min = (array[j] < *min) ? (array + j) : min;
+			minpos = (array[j] < *minpos) ? (array + j) : minpos;
 
-		if ((array + i) != min)
+		if ((array + i) != minpos)
 		{
-			swap_ints(array + i, min);
+			swap_ints(array + i, minpos);
 			print_array(array, size);
 		}
 	}
