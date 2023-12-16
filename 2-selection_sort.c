@@ -20,25 +20,23 @@ void swap_two(int *n1, int *n2)
  * @size: size is array
  */
 void selection_sort(int *array, size_t size)
-{
-	int i, j, min_postion;
-	
+{	
+	int *min_postion;
+	int i, j;
+
 	if (array == NULL || size < 2)
 		return;
-	
+
 	for (i = 0; i < size - 1; i++)
 	{
-		min_postion = i;
-		for (j = i + 1; j <size; j++)
-		{
-			if (array[j] < array[min_postion])
-				min_postion = j;
-		}
-		if (min_postion != i)
-		{
-			swap_two(array + i, array + min_postion);
-			print_array(array, size);
+		min_postion = array + i;
+		for (j = i + 1; j < size; j++)
+			min = (array[j] < *min_postion) ? (array + j) : min_postion;
 
+		if ((array + i) != min_postion)
+		{
+			swap_ints(array + i, min_postion);
+			print_array(array, size);
 		}
 	}
 }
