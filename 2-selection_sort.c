@@ -24,7 +24,7 @@ void selection_sort(int *array, size_t size)
 {
 
 	int *minpos;
-	int i, j;
+	size_t i, j;
 
 	if (array == NULL || size < 2)
 		return;
@@ -33,7 +33,14 @@ void selection_sort(int *array, size_t size)
 	{
 		minpos = array + i;
 		for (j = i + 1; j < size; j++)
-			minpos = (array[j] < *minpos) ? (array + j) : minpos;
+		{
+			if (array[j] < *minpos)
+			{
+				minpos = array + j
+			}
+			else
+				minpos = minpos
+		}
 
 		if ((array + i) != minpos)
 		{
